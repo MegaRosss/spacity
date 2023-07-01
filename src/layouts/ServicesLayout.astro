@@ -1,6 +1,6 @@
 ---
 import Baselayout from '../layouts/BaseLayout.astro';
-import Dropdown from '../components/dropdown.astro'
+
 // make a service layout page in the layout folder then in each individual component can make use of it 
 export interface Props {
 	image: string
@@ -110,11 +110,60 @@ const { image, serviceName, time, ratings, starcount  } = Astro.props;
                     <div class="span">{ratings} ratings</div>
                 </div>
             </div>
-            <Dropdown />           
+            <div class="dropdown">
+                <button class="toggle">Select Service Type 
+                <select name="dropdown" id="">
+                    <option value="basic">basic</option>
+                    <option value="basic">basic</option>
+                    <option value="basic">basic</option>
+                </select>
+                </button>
+                
+              </div>        
+
+              <div class="infobx">
+                <div class="dropbox">
+                    <span>
+                        Choose date
+                    </span>
+                    <input type="date" name="" id="" class="drop">
+                </div>
+                <div class="dropbox">
+                    <span>
+                        Choose person                    
+                    </span>
+                    <select name="personnel" id="" class="drop">
+                    <option value="basic">basic</option>
+                    <option value="basic">basic</option>
+                    <option value="basic">basic</option>
+                    </select>
+                </div>
+              </div>
 			<!-- <Services /> -->
+            <div>
+                Description <span>  </span>
+            </div>
 		</Baselayout>
         
         <style>
+            .drop{
+                border-radius: 0.375rem;
+border: 1px solid #D9DBDB;
+background: #FFF;
+padding: .5em 1em;
+            }
+
+            .infobx{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-inline: 2em;
+            }
+            .dropbox{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
             .container {
                 margin: 0em;
                 position: relative;
@@ -186,6 +235,29 @@ letter-spacing: 0.0625rem;
                 object-fit: cover;
                 width: 100%;
             }
+
+            .dropdown {
+  display: grid;
+  place-self: center;
+  margin-bottom: 2em;
+}
+
+.toggle {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-inline: 2em;
+  color: #175C4C;
+text-align: center;
+font-size: 1rem;
+font-family: Tenor Sans;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
         </style>
         
         <!-- make a baselayout file that will have the base layout that will exist in every screen from  the figma file -->
