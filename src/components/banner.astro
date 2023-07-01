@@ -1,0 +1,31 @@
+---
+import Coupon from '../components/coupon.astro';
+---
+<div>
+<Coupon/>
+<Coupon/>
+<Coupon/>
+<Coupon/>
+<Coupon/>
+<Coupon/>
+<Coupon/>
+<Coupon/>
+</div>
+<style>
+	div{
+        display: grid;
+        grid-auto-flow: column ;
+        
+        gap: 2em;
+        overflow-x: auto;
+        padding: 1em;
+        margin-inline: 1em;
+        scroll-behavior: smooth;
+        overscroll-behavior-inline:contain ;
+        scroll-snap-type:inline mandatory;
+    }
+    div > *{
+        scroll-snap-align: start ;
+
+    }
+</style>

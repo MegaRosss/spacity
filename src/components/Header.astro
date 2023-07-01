@@ -1,25 +1,78 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+import '../styles/global.css';
+
+
+export interface Props {
+	userName: string;
+}
+
+
+const { userName } = Astro.props;
 ---
 
-<header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
-	</nav>
-</header>
+<div class="header flex">
+<div class="textbx">
+		<h1> Hello, {userName}</h1>
+		<h6>Find the service you want</h6>
+</div>
+<span>
+	<svg class = "stroke" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M11.275 18.75C15.6242 18.75 19.15 15.2242 19.15 10.875C19.15 6.52576 15.6242 3 11.275 3C6.92572 3 3.39996 6.52576 3.39996 10.875C3.39996 15.2242 6.92572 18.75 11.275 18.75Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+		<path d="M16.8437 16.4438L21.3999 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+		</svg>	
+</span>
+</div>
+
 <style>
-	header {
-		margin: 0em 0 2em;
+	a {
+		display: inline-block;
+		text-decoration: none;
 	}
-	h2 {
-		margin: 0.5em 0;
+	a.active {
+		font-weight: bolder;
+		text-decoration: underline;
+	}
+	.header{
+		width: 100%;
+		padding:3em 2em 1em;
+	}
+	.flex{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	span{
+		background-color:#7BD351 ;
+		border-radius: 3.3125rem;
+		padding: 1em;
+flex-shrink: 0;
+	}
+	.stroke{
+		fill: none;
+		stroke: white;
+		stroke-width: 2;
+	}
+	h1{color: #1E2022;
+font-size: 1.5rem;
+font-family: Tenor Sans;
+font-style: normal;
+font-weight: 400;
+line-height: 1.5rem;
+letter-spacing: 0.125rem;
+margin-bottom: .3em;
+	}
+	
+	h6{
+font-size: 1rem;
+font-family: Tenor Sans;
+font-style: normal;
+font-weight: 400;
+line-height: 1.5rem;
+color: rgba(0, 0, 0, 0.60);
+
+
 	}
 </style>

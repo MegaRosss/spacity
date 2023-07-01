@@ -1,0 +1,49 @@
+
+---
+import Servicebtn from '../components/servicebtn.astro';
+import haircut from '../assets/haircut-1.svg'
+import nails from '../assets/manicure-1.svg'
+import facials from '../assets/beauty-treatment-1.svg'
+import dye from '../assets/hair-dye-1.svg'
+import spa from '../assets/spa-1.svg'
+import wax from '../assets/wax-1.svg'
+import makeup from '../assets/lipstick-1.svg'
+import massage from '../assets/massage-1.svg'
+
+---
+
+<div class="box">
+  <h1 >What are you looking for?</h1>
+  <div class="grid">
+    <Servicebtn img={haircut} servicename='Hair cut' alt='this is an icon for hair'/>
+    <Servicebtn img={nails} servicename='Nails' alt='this is an icon for nails'/>
+    <Servicebtn img={facials} servicename='Facials' alt='this is an icon for facials'/>
+    <Servicebtn img={dye} servicename='Coloring' alt='this is an icon for coloring'/>
+    <Servicebtn img={spa} servicename='Spa' alt='this is an icon for spa'/>
+    <Servicebtn img={wax} servicename='Waxing' alt='this is an icon for waxing'/>
+    <Servicebtn img={makeup} servicename='Makeup' alt='this is an icon for makeup'/>
+    <Servicebtn img={massage} servicename='Massage' alt='this is an icon for massage'/>
+
+  </div>
+</div>
+
+<style>
+  .box{
+    margin-inline: 2em;
+  }
+	.grid{
+    
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  }
+    h1{
+      color: #000;
+font-size: 1.1875rem;
+font-weight: 400;
+line-height: 1.5rem;
+margin-block: 1em;
+    }
+</style>

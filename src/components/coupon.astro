@@ -1,0 +1,71 @@
+---
+import barber from '/src/components/coupon.astro.1.css/images/barber.png'
+---
+<div class="coupon">
+<div class="textbx">
+    <h2>
+        Upto 25%
+    </h2>
+    <h1>
+        Look more beautiful and Save more discount.
+    </h1>
+    <!-- this is just for the presentation -->
+    <p>Get offer now!</p>
+</div>
+<div class="imgbx">
+
+    <img src={barber} alt="">
+</div>
+
+</div>
+<style>
+.coupon{
+    display: flex;
+        background-position: center right;
+        border-radius: 0.5625rem;
+        background-color: #7BD351;
+background-image: url(/images/ellipse-2.png);
+        min-width: 23.6875rem;
+
+padding: .2em 1em;
+
+}
+    .textbx{
+        display: flex;
+        flex-direction: column;
+        gap: .2em;
+        justify-content: center;
+
+    }
+    h1{
+        color: #FFF;
+font-size: 1.1875rem;
+font-family: Tenor Sans;
+font-style: normal;
+font-weight: 400;
+line-height: 1.5rem;
+width: 18ch;
+
+    }
+    h2{
+
+color: #175C4C;
+font-size: 1rem;
+font-family: Tenor Sans;
+font-style: normal;
+font-weight: 400;
+line-height: 1.5rem;
+
+    }
+	img{
+        display: block;
+        width: 100%;
+    }
+    p{
+        color: white;
+        border-radius: 1.25rem;
+background: #FFD48A;
+padding: .6em ;
+width: 140px;
+    }
+</style>

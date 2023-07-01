@@ -1,0 +1,33 @@
+---
+export interface Props {
+	img: string;
+    servicename: string
+    alt: string
+}
+
+const { img, servicename, alt } = Astro.props;
+---
+<div class="group">
+    <div class="imgbx">
+        <img  alt={alt} src={img} />
+    </div>
+    <div >{servicename}</div>
+  </div>
+  <style>
+    .imgbx{
+        border-radius: 5.375rem;
+background: #E2F5FA;
+padding: 20px;
+  text-align: center;
+  width: 5em;
+
+}
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+  
+  </style>
