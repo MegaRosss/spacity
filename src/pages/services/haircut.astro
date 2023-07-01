@@ -1,10 +1,18 @@
 ---
 import Baselayout from '../../layouts/BaseLayout.astro';
+// make a service layout page in the layout folder then in each individual component can make use of it 
+import Services from '../../components/services/banner.astro';
+const slides = [
+                    "../../assets/waves.png",
+                    "../../assets/barbercutting.png",
+                    "../../assets/eqipment.png",
+                ]
+const currentIndex = 0
 
 ---
 
 		<Baselayout>
-			
+			<!-- <Services /> -->
 		</Baselayout>
 	
 <!-- make a baselayout file that will have the base layout that will exist in every screen from  the figma file -->
