@@ -1,5 +1,5 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
+import Baselayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
@@ -9,18 +9,12 @@ import Banner from '../components/banner.astro';
 import Service from '../components/service.astro';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header userName={USER_NAME}/>
-		<Banner />
-		<Service/>
-		<Footer />
-		<Banner />
-		<Nav />
-	</body>
-</html>
+		<Baselayout>
+			<Header userName={USER_NAME}/>
+			<Banner />
+			<Service/>
+			<Footer />
+			<Banner />
+		</Baselayout>
+	
 <!-- make a baselayout file that will have the base layout that will exist in every screen from  the figma file -->
