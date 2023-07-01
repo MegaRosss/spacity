@@ -1,0 +1,191 @@
+---
+import Baselayout from '../layouts/BaseLayout.astro';
+import Dropdown from '../components/dropdown.astro'
+// make a service layout page in the layout folder then in each individual component can make use of it 
+export interface Props {
+	image: string
+    serviceName: string
+    time: string
+    ratings: number
+    starcount: number
+    
+}
+
+
+
+const { image, serviceName, time, ratings, starcount  } = Astro.props;
+---
+
+		<Baselayout>
+
+            <div class="container">
+                <span class="backbtn"
+                    ><svg
+                        width="66"
+                        height="66"
+                        viewBox="0 0 66 66"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <g id="ArrowCircleLeft">
+                            <g id="Vector" filter="url(#filter0_d_1_249)">
+                                <path
+                                    d="M33 35C39.6274 35 45 29.6274 45 23C45 16.3726 39.6274 11 33 11C26.3726 11 21 16.3726 21 23C21 29.6274 26.3726 35 33 35Z"
+                                    fill="white"></path>
+                                <path
+                                    d="M33 35C39.6274 35 45 29.6274 45 23C45 16.3726 39.6274 11 33 11C26.3726 11 21 16.3726 21 23C21 29.6274 26.3726 35 33 35Z"
+                                    stroke="white"
+                                    stroke-width="2"
+                                    stroke-miterlimit="10"></path>
+                            </g>
+                            <path
+                                id="Vector_2"
+                                d="M32.2375 27.2375L28 23L32.2375 18.7625"
+                                stroke="black"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path
+                                id="Vector_3"
+                                d="M28 23H38"
+                                stroke="black"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </g>
+                        <defs>
+                            <filter
+                                id="filter0_d_1_249"
+                                x="0"
+                                y="0"
+                                width="66"
+                                height="66"
+                                filterUnits="userSpaceOnUse"
+                                color-interpolation-filters="sRGB"
+                            >
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"
+                                ></feFlood>
+                                <feColorMatrix
+                                    in="SourceAlpha"
+                                    type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                    result="hardAlpha"></feColorMatrix>
+                                <feOffset dy="10"></feOffset>
+                                <feGaussianBlur stdDeviation="10"></feGaussianBlur>
+                                <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                <feColorMatrix
+                                    type="matrix"
+                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                                ></feColorMatrix>
+                                <feBlend
+                                    mode="normal"
+                                    in2="BackgroundImageFix"
+                                    result="effect1_dropShadow_1_249"></feBlend>
+                                <feBlend
+                                    mode="normal"
+                                    in="SourceGraphic"
+                                    in2="effect1_dropShadow_1_249"
+                                    result="shape"></feBlend>
+                            </filter>
+                        </defs>
+                    </svg>
+                </span>
+            
+                    <div class="slideshow">
+                        <img src={image} alt="images">
+                    </div>
+            </div>
+            <div class="imgcontainer">
+                <div class="imgbx"><img src="" alt=""></div>
+                <div class="imgbx"><img src="" alt=""></div>
+                <div class="imgbx"><img src="" alt=""></div>
+            </div>
+            <div class="metaheader">
+                <div class="textbx bx">
+                    <h1>{serviceName}</h1>
+                    <span>Time: {time}</span>
+                </div>
+                <div class="ratingbx bx" >
+                    <div class="rating">{starcount}</div>
+                    <div class="span">{ratings} ratings</div>
+                </div>
+            </div>
+            <Dropdown />           
+			<!-- <Services /> -->
+		</Baselayout>
+        
+        <style>
+            .container {
+                margin: 0em;
+                position: relative;
+            }
+            .slideshow{
+                background-color: brown;
+                min-height: 300px;
+
+            }
+            .metaheader{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-inline: 1em;
+            }
+            .metaheader .bx{
+                padding: 1em;
+            }
+            .metaheader .bx .span{
+                color: #1E2022;
+font-size: 1rem;
+font-family: Tenor Sans;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.0625rem;
+            }
+            
+            .metaheader .bx span{
+                color: #77838F;
+font-size: 0.875rem;
+font-family: Tenor Sans;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.0625rem;
+            }
+            .metaheader .bx h1{
+                margin-bottom: .2em;
+                color: #1E2022;
+font-size: 1.75rem;
+font-family: Tenor Sans;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.0625rem;
+            }
+            
+            .metaheader .bx .rating{
+                margin-bottom: .5em;
+            }
+            
+            .imgcontainer{
+                margin-block: 1em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1em;
+            }
+            .imgbx{
+                background: blue;
+                width: 100px;
+                aspect-ratio: 1/1;
+            }
+            .backbtn{
+                position: absolute;
+                top: 1em;
+                display: block;
+                object-fit: cover;
+                width: 100%;
+            }
+        </style>
+        
+        <!-- make a baselayout file that will have the base layout that will exist in every screen from  the figma file -->
