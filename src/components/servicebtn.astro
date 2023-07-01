@@ -3,15 +3,19 @@ export interface Props {
 	img: string;
     servicename: string
     alt: string
+    href:string
 }
 
-const { img, servicename, alt } = Astro.props;
+const { img, servicename, alt, href } = Astro.props;
 ---
 <div class="group">
-    <div class="imgbx">
+  
+  <div class="imgbx">
+      <a href={href}>
         <img  alt={alt} src={img} />
+      </a>
     </div>
-    <div >{servicename}</div>
+    <div class="name">{servicename}</div>
   </div>
   <style>
     .imgbx{
@@ -27,7 +31,9 @@ img{
     width: 100%;
     object-fit: cover;
 }
-
+.name{
+  text-align: center;
+}
 
   
   </style>
