@@ -1,69 +1,59 @@
 ---
-import barber from '/src/components/coupon.astro.1.css/images/barber.png'
+import barber from "/src/components/coupon.astro.1.css/images/barber.png";
 ---
+
 <div class="coupon">
-<div class="textbx">
-    <h2>
-        Upto 25%
-    </h2>
-    <h1>Look more beautiful and Save more discount.</h1>
-    <!-- this is just for the presentation -->
-    <p>Get offer now!</p>
-</div>
-<div class="imgbx">
-
-    <img src={barber} alt="">
-</div>
-
+    <div class="textbx">
+        <h2>Upto 25%</h2>
+        <h1>Look more beautiful and Save more discount.</h1>
+        <!-- this is just for the presentation -->
+        <p>Get offer now!</p>
+    </div>
+    <div class="imgbx"><img src={barber} alt="" /></div>
 </div>
 <style>
-.coupon{
-    display: flex;
+    .coupon {
+        display: flex;
         background-position: center right;
         border-radius: 0.5625rem;
-        background-color: #7BD351;
-/* background-image: url(/images/ellipse-2.png); */
+        background-color: #7bd351;
+        /* background-image: url(/images/ellipse-2.png); */
         min-width: 23.6875rem;
 
-padding: .2em 1em;
-
-}
-    .textbx{
+        padding: 0.2em 1em;
+    }
+    .textbx {
         display: flex;
         flex-direction: column;
-        gap: .2em;
+        gap: 0.2em;
         justify-content: center;
-
     }
-    h1{
-        color: #FFF;
-font-size: 1.1875rem;
-font-family: Tenor Sans;
-font-style: normal;
-font-weight: 400;
-line-height: 1.5rem;
-width: 18ch;
-
+    h1 {
+        color: #fff;
+        font-size: 1.1875rem;
+        font-family: Tenor Sans;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem;
+        width: 18ch;
     }
-    h2{
-
-color: #175C4C;
-font-size: 1rem;
-font-family: Tenor Sans;
-font-style: normal;
-font-weight: 400;
-line-height: 1.5rem;
-
+    h2 {
+        color: #175c4c;
+        font-size: 1rem;
+        font-family: Tenor Sans;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5rem;
     }
-	img{
+    img {
         display: block;
         width: 100%;
     }
-    p{
+    p {
         color: white;
         border-radius: 1.25rem;
-background: #FFD48A;
-padding: .6em ;
-width: 140px;
+        background: #ffd48a;
+        padding: 0.6em;
+        width: 140px;
     }
 </style>
