@@ -1,0 +1,28 @@
+---
+const today = new Date();
+export interface Props {
+    content: string
+}
+const { content } = Astro.props;
+---
+<button>
+{content}
+</button>
+<style>
+	button {
+        min-width: 18em;
+        margin-inline: auto;
+        color: #FFF;
+        padding-block: 1em ;
+        border: none;
+        border-radius: 1.5em;
+text-align: center;
+font-size: 1.125rem;
+font-family: Tenor Sans;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+background-color: #7BD351;
+        
+	}
+</style>

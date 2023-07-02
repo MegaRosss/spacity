@@ -1,0 +1,37 @@
+---
+import Btn from "./btn.astro";
+
+const content = 'Continue'
+---
+
+
+    <div>
+        <Btn content={content}/>
+        <span> Save for later</span>
+    </div>
+
+
+
+
+<style>
+    div{        /* bottom: 0px; */
+        background: #E2F5FA;
+box-shadow: 0px 2px 60px 0px rgba(0, 0, 0, 0.07);
+display: flex;
+justify-content: center;
+flex-direction: column;
+gap: 1em;
+padding: 1em;
+width: 100%;
+    }
+    span{
+        color: #313B3B;
+text-align: center;
+font-size: 0.875rem;
+font-family: Tenor Sans;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.0625rem;
+    }
+</style>

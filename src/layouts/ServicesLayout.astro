@@ -1,5 +1,8 @@
 ---
-import Dropdown from '../components/dropdown.astro';
+import Dropdown from '../components/Dropdown.astro';
+import Modal from '../components/modal.astro';
+import Popup from '../components/popup.astro';
+import Footer from '../components/Footer.astro';
 import Baselayout from '../layouts/BaseLayout.astro';
 
 // make a service layout page in the layout folder then in each individual component can make use of it 
@@ -12,90 +15,91 @@ export interface Props {
     serviceimg1: string
     serviceimg2: string
     serviceimg3: string   
+    description: string   
 }
 
 
 
-const { image, serviceName, time, ratings, starcount, serviceimg1,serviceimg2,serviceimg3 } = Astro.props;
+const { image, serviceName, time, ratings, starcount, serviceimg1,serviceimg2,serviceimg3, description,} = Astro.props;
 ---
 
 		<Baselayout>
-
             <div class="container">
-                <span class="backbtn"
-                    ><svg
+                <span class="backbtn">
+            <svg
+                width="66"
+                height="66"
+                viewBox="0 0 66 66"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <g id="ArrowCircleLeft">
+                    <g id="Vector" filter="url(#filter0_d_1_249)">
+                        <path
+                            d="M33 35C39.6274 35 45 29.6274 45 23C45 16.3726 39.6274 11 33 11C26.3726 11 21 16.3726 21 23C21 29.6274 26.3726 35 33 35Z"
+                            fill="white"></path>
+                        <path
+                            d="M33 35C39.6274 35 45 29.6274 45 23C45 16.3726 39.6274 11 33 11C26.3726 11 21 16.3726 21 23C21 29.6274 26.3726 35 33 35Z"
+                            stroke="white"
+                            stroke-width="2"
+                            stroke-miterlimit="10"></path>
+                    </g>
+                    <path
+                        id="Vector_2"
+                        d="M32.2375 27.2375L28 23L32.2375 18.7625"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path
+                        id="Vector_3"
+                        d="M28 23H38"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </g>
+                <defs>
+                    <filter
+                        id="filter0_d_1_249"
+                        x="0"
+                        y="0"
                         width="66"
                         height="66"
-                        viewBox="0 0 66 66"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
                     >
-                        <g id="ArrowCircleLeft">
-                            <g id="Vector" filter="url(#filter0_d_1_249)">
-                                <path
-                                    d="M33 35C39.6274 35 45 29.6274 45 23C45 16.3726 39.6274 11 33 11C26.3726 11 21 16.3726 21 23C21 29.6274 26.3726 35 33 35Z"
-                                    fill="white"></path>
-                                <path
-                                    d="M33 35C39.6274 35 45 29.6274 45 23C45 16.3726 39.6274 11 33 11C26.3726 11 21 16.3726 21 23C21 29.6274 26.3726 35 33 35Z"
-                                    stroke="white"
-                                    stroke-width="2"
-                                    stroke-miterlimit="10"></path>
-                            </g>
-                            <path
-                                id="Vector_2"
-                                d="M32.2375 27.2375L28 23L32.2375 18.7625"
-                                stroke="black"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"></path>
-                            <path
-                                id="Vector_3"
-                                d="M28 23H38"
-                                stroke="black"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"></path>
-                        </g>
-                        <defs>
-                            <filter
-                                id="filter0_d_1_249"
-                                x="0"
-                                y="0"
-                                width="66"
-                                height="66"
-                                filterUnits="userSpaceOnUse"
-                                color-interpolation-filters="sRGB"
-                            >
-                                <feFlood flood-opacity="0" result="BackgroundImageFix"
-                                ></feFlood>
-                                <feColorMatrix
-                                    in="SourceAlpha"
-                                    type="matrix"
-                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                    result="hardAlpha"></feColorMatrix>
-                                <feOffset dy="10"></feOffset>
-                                <feGaussianBlur stdDeviation="10"></feGaussianBlur>
-                                <feComposite in2="hardAlpha" operator="out"></feComposite>
-                                <feColorMatrix
-                                    type="matrix"
-                                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                                ></feColorMatrix>
-                                <feBlend
-                                    mode="normal"
-                                    in2="BackgroundImageFix"
-                                    result="effect1_dropShadow_1_249"></feBlend>
-                                <feBlend
-                                    mode="normal"
-                                    in="SourceGraphic"
-                                    in2="effect1_dropShadow_1_249"
-                                    result="shape"></feBlend>
-                            </filter>
-                        </defs>
-                    </svg>
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"
+                        ></feFlood>
+                        <feColorMatrix
+                            in="SourceAlpha"
+                            type="matrix"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                            result="hardAlpha"></feColorMatrix>
+                        <feOffset dy="10"></feOffset>
+                        <feGaussianBlur stdDeviation="10"></feGaussianBlur>
+                        <feComposite in2="hardAlpha" operator="out"></feComposite>
+                        <feColorMatrix
+                            type="matrix"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                        ></feColorMatrix>
+                        <feBlend
+                            mode="normal"
+                            in2="BackgroundImageFix"
+                            result="effect1_dropShadow_1_249"></feBlend>
+                        <feBlend
+                            mode="normal"
+                            in="SourceGraphic"
+                            in2="effect1_dropShadow_1_249"
+                            result="shape"></feBlend>
+                    </filter>
+                </defs>
+            </svg>
+                 
                 </span>
             
                     <div class="slideshow">
-
+                        <img src={image} alt="">
                     </div>
             </div>
             <div class="imgcontainer">
@@ -113,6 +117,13 @@ const { image, serviceName, time, ratings, starcount, serviceimg1,serviceimg2,se
                     <div class="span">{ratings} ratings</div>
                 </div>
             </div>
+            <!-- <Modal id='dialog' open='Open modal'>
+                <main slot='main'>
+            <Popup class=" popup" />
+                </main>
+                <button slot='close'>Close modal</button>
+              </Modal> -->
+              
             <Dropdown />
             
               <div class="infobx">
@@ -126,33 +137,50 @@ const { image, serviceName, time, ratings, starcount, serviceimg1,serviceimg2,se
                     <span>
                         Choose person                    
                     </span>
-                    <select name="personnel" id="" class="drop">
-                    <option value="basic">basic</option>
-                    <option value="basic">basic</option>
-                    <option value="basic">basic</option>
+                    <select name="personnel" id="" class="drop select">
+                    <option value="basic">Basic - #250</option>
+                    <option value="basic">Premium - #449</option>
+                    <option value="basic">VIP - #799</option>
                     </select>
                 </div>
               </div>
 			<!-- <Services /> -->
-            <div class="describe">
-                Description 
-                <span>
-                <select name="" id=""> 
-                </select>
-                </span>
-            </div>
+            <!-- <div >
+               <h1>Description </h1> 
+                <span>{description}</span>
+            </div> -->
+            <select name="describe" id="" class="describe">
+                <option value="describe">Description</option>
+                <option value="describe">{description}</option>
+            </select>
+            <Footer />
 		</Baselayout>
         
         <style>
+            .select{
+                border: none;
+            }
+            .popup{
+                
+            }
             .describe{
-                width: 15ch;
+                
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-evenly;
                 align-items: center;
                 /* place-self: center; */
-                margin-inline: auto;
+                margin: 1em auto;
+                color: #000;
+font-size: 1.125rem;
+font-family: Tenor Sans;
+font-style: normal;
+font-weight: 400;
+line-height: 1.5rem;
             }
 
+.describe span{
+    opacity: 0;
+}
             .drop{
                 border-radius: 0.375rem;
 border: 1px solid #D9DBDB;
@@ -176,7 +204,7 @@ padding: .5em 1em;
                 position: relative;
             }
             .slideshow{
-                background-image: url('../assets/waves.png');
+                /* background-image: url('../assets/waves.png'); */
                 min-height: 300px;
 
             }
@@ -231,7 +259,7 @@ letter-spacing: 0.0625rem;
             }
             
             .imgcontainer{
-                margin-block: 1em;
+                margin-block: .5em;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -240,7 +268,7 @@ letter-spacing: 0.0625rem;
             .imgbx{
                 width: 100px;
                 aspect-ratio: 1/1;
-                background-image: url('../assets/cuttinghair.png');
+                /* background-image: url('../assets/cuttinghair.png'); */
             }
             .imgbx img{
                 /* background: blue; */

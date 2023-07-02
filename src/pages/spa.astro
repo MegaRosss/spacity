@@ -1,0 +1,14 @@
+---
+import ServicesLayout from '../layouts/ServicesLayout.astro';
+import showcaseimg from '../assets/waves.png';
+import firstimg from '../assets/instruments.png';
+import secondimg from '../assets/instruments.png';
+import thirdimg from '../assets/instruments.png';
+const description = "lorem ispum is not a real language"
+
+---
+
+	<ServicesLayout image={showcaseimg} serviceName='SPA' time='1 hour' ratings={1281} starcount={4} serviceimg1={firstimg} serviceimg2={thirdimg} serviceimg3={secondimg} description:{description} />
+			<!-- <Services /> -->
+	
+<!-- make a baselayout file that will have the base layout that will exist in every screen from  the figma file -->
