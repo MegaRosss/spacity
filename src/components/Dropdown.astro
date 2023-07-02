@@ -2,11 +2,51 @@
 
 
 
+<div class="dropdown">
+    <button id="btn" class="toggle">Select Service Type 
+    <select name="dropdown" id="select" class='inactive'>
+        <option value="basic">basic</option>
+        <option value="basic">basic</option>
+        <option value="basic">basic</option>
+    </select>
+    </button>
+    
+  </div>        
 
 
 
   <style>
-    
+        .dropdown {
+  display: grid;
+  place-self: center;
+  margin-bottom: 2em;
+
+}
+
+/* .inactive{
+    opacity: 0;
+} */
+
+
+option{
+    padding: 1em 1.5em;
+}
+.toggle {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-inline: 2em;
+  color: #175C4C;
+text-align: center;
+font-size: 1rem;
+font-family: Tenor Sans;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
 
 /* .options {
   position: absolute;
@@ -40,17 +80,3 @@
   background-color: #f0f0f0;
 } */
   </style>
-  <script>
-function toggleDropdown() {
-  let options = document.getElementById("options");
-  options.classList.toggle("open");
-}
-
-function selectOption(option) {
-  let toggle = document.getElementsByClassName("toggle")[0];
-  toggle.textContent = option.textContent;
-  let options = document.getElementById("options");
-  options.classList.remove("open");
-  option.classList.add("selected");
-}
-  </script>
