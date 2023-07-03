@@ -1,0 +1,68 @@
+---
+import Button from "../components/btn.astro";
+import logo from "../assets/logo.png"
+import BaseHead from "../components/BaseHead.astro";
+
+---
+<BaseHead />
+<div class="container">
+    <div class="imgbx">
+        <img src={logo} alt="">
+    </div>
+    <div class="textbx">
+        <h1>Saloon & Spa</h1>
+        <p>Book saloon & spa services from home at your figner tips.</p>
+        <Button content="Let’s begin" />
+    </div>
+    
+</div>
+<style>
+    .container{
+        display: grid;
+        place-self: center;
+        margin-block: auto;
+        
+    }
+    .textbx{
+        margin-top: 3em;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1em;
+
+    }
+    .textbx p{
+        color: #000;
+text-align: center;
+font-size: 1.2rem;
+font-family: Tenor Sans;
+font-style: normal;
+font-weight: 400;
+line-height: 1.5rem;
+
+
+    }
+    .textbx h1{
+        color: #000;
+text-align: center;
+font-size: 1.75rem;
+font-family: Tenor Sans;
+font-style: normal;
+font-weight: 400;
+line-height: 1.5rem;
+    }
+    .imgbx{
+        width: 26.75rem;
+height: 22.4375rem;
+        display: grid;
+        place-self: center;
+    }
+
+    img{
+        width: 100%;
+        display: block;
+        object-fit: cover;
+    }
+</style>
