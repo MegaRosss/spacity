@@ -3,11 +3,12 @@
 
 
 <div class="dropdown">
-    <button id="btn" class="toggle">Select Service Type 
+    <button id="btn" class="toggle"> 
     <select name="dropdown" id="select" class='inactive select'>
-        <option value="basic">basic</option>
-        <option value="basic">basic</option>
-        <option value="basic">basic</option>
+        <option value="basic">Select Service Type</option>
+        <option value="basic">Basic - #250</option>
+        <option value="basic">Premium - #449</option>
+        <option value="basic">VIP - #799</option>
     </select>
     </button>
     
@@ -20,18 +21,24 @@
   display: grid;
   place-self: center;
   margin-bottom: 2em;
+  
 
 }
 
-/* .inactive{
-    opacity: 0;
-} */
+
 .select{
   border: none;
 }
 
 option{
     padding: 1em 1.5em;
+    color: #175C4C;
+text-align: center;
+font-family: Tenor Sans;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 .toggle {
   padding: 0.8rem 1rem;
@@ -41,44 +48,8 @@ option{
   border-radius: 4px;
   cursor: pointer;
   margin-inline: 2em;
-  color: #175C4C;
-text-align: center;
-font-size: 1rem;
-font-family: Tenor Sans;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+
 }
 
-/* .options {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-top: none;
-  border-radius: 0 0 4px 4px;
-  list-style: none;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease-in-out;
-}
 
-.options.open {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.option {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.option.selected {
-  background-color: #f0f0f0;
-} */
   </style>

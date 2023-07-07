@@ -4,6 +4,9 @@ import Modal from '../components/modal.astro';
 import Popup from '../components/popup.astro';
 import Footer from '../components/Footer.astro';
 import Baselayout from '../layouts/BaseLayout.astro';
+import RatingsStars from '../components/ratings-stars.astro';
+import { RATINGS } from '../consts';
+import Personnel from '../components/personnel.astro';
 
 // make a service layout page in the layout folder then in each individual component can make use of it 
 export interface Props {
@@ -113,8 +116,8 @@ const { image, serviceName, time, ratings, starcount, serviceimg1,serviceimg2,se
                     <span>Time: {time}</span>
                 </div>
                 <div class="ratingbx bx" >
-                    <div class="rating">{starcount}</div>
-                    <div class="span">{ratings} ratings</div>
+                    <RatingsStars />
+                    <div class="span">{RATINGS.length} ratings</div>
                 </div>
             </div>
             <!-- <Modal id='dialog' open='Open modal'>
@@ -125,6 +128,7 @@ const { image, serviceName, time, ratings, starcount, serviceimg1,serviceimg2,se
               </Modal> -->
               
             <Dropdown />
+            <Personnel/>
             
               <div class="infobx">
                 <div class="dropbox">
@@ -171,6 +175,9 @@ const { image, serviceName, time, ratings, starcount, serviceimg1,serviceimg2,se
                 /* place-self: center; */
                 margin: 1em auto;
                 color: #000;
+                border: none;
+                outline: none;
+                user-select: none;
 font-size: 1.125rem;
 font-family: Tenor Sans;
 font-style: normal;
@@ -198,6 +205,17 @@ padding: .5em 1em;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+            }
+            .dropbox span{
+                color: #8A8E8E;
+font-family: Tenor Sans;
+font-size: 0.75rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.0625rem;
+text-transform: uppercase;
+padding: 1em 0.2em;
             }
             .container {
                 margin: 0em;

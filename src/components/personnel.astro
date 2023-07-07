@@ -1,0 +1,84 @@
+---
+import RatingsStars from "./ratings-stars.astro";
+import { RATINGS } from "../consts";
+import faces from "../assets/professional.png"
+
+---
+<div class="prof">
+<div class="containbx">
+        <div class="textbx">
+            <h1>NAME : Marie.O</h1>
+            <h2>PROFESSION : BARBER</h2>
+            <RatingsStars />
+            <h3>{RATINGS.length} ratings </h3>
+            <span class="price">
+                PRICE :- #1500
+            </span>
+        </div>
+        <div class="imgbx">
+            <img src={faces} alt="">
+        </div>
+    </div>
+</div>
+<style>
+    .prof{
+        display: none;
+    }
+    .textbx{
+        display: flex;
+        justify-content: center;
+        align-items: self-start;
+        flex-direction: column;
+        gap: .2em;
+    }
+    .containbx{
+        
+        display: flex;
+        justify-content: space-between;
+        margin-inline: 2em;
+        padding: 1em;
+    }
+    .imgbx{
+        width: 5em;
+
+    }
+    img{
+        width: 100%;
+        display: block;
+        object-fit: contain;
+    }
+
+h1{
+    color: #000;
+text-align: center;
+font-family: Tenor Sans;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+h2{
+    color: #979797;
+text-align: center;
+font-family: Tenor Sans;
+font-size: 0.9375rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+h3{
+    color: #1E2022;
+font-family: Tenor Sans;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 0.0625rem;
+}
+
+span{
+    border-radius: 2.25rem;
+background: rgba(217, 217, 217, 0.32);
+padding: .2em 0.5em;
+}
+</style>
